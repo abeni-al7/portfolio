@@ -11,7 +11,7 @@ const Footer = () => {
                     {/* Branding & Copyright */}
                     <div className="flex flex-col items-center md:items-start space-y-2">
                         <h3 className="text-xl font-semibold bg-gradient-to-r from-white to-neon-blue bg-clip-text text-transparent">
-                            Abenezer Alebachew
+                            Abenezer Alebachew Endalew
                         </h3>
                         <p className="text-gray-400 text-sm">
                             © {currentYear} All rights reserved.
