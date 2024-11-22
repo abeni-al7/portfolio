@@ -36,6 +36,14 @@ const projects = [
     github: 'https://github.com/abeni-al7/tutor_connect',
     demo: 'https://youtu.be/V-dnAzBMw_U?si=bcsfPQBmPznxNEs_',
   },
+  {
+    title: 'Aben Shell',
+    description: 'A Linux Command-line Interpreter (Shell) written in C programming language.',
+    image: 'https://media.istockphoto.com/id/2177959161/photo/programmer-coding-java-script-html-code-on-notebook-screen-at-home-work-from-home-working.jpg?s=1024x1024&w=is&k=20&c=ApfeH2V66_9XtRd3vmsAkC3MBFZ0A5S2Dzzr-H2NwFU=',
+    tech: ['C', 'Linux'],
+    github: 'https://github.com/abeni-al7/aben_shell',
+    demo: 'https://github.com/abeni-al7/aben_shell',
+  }
 ];
 
 const Portfolio = () => {
