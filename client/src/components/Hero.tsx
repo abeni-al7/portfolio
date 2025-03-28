@@ -65,7 +65,7 @@ const Hero = () => {
             View My Work
           </button>
           <a
-            href="/Abenezer_Alebachew_CV.pdf"
+            href="/Abenezer-Alebachew-Endalew-Software-Engineer.pdf"
             download
             className="w-full sm:w-auto px-8 py-3 bg-dark-card border-2 border-neon-blue text-neon-blue rounded-full font-semibold hover:bg-neon-blue hover:text-dark-bg transition-all duration-300 flex items-center justify-center gap-2 group"
           >

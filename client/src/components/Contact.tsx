@@ -26,7 +26,7 @@ const Contact = () => {
     },
     {
       platform: 'WhatsApp',
-      link: '+251929341497',
+      link: 'https://wa.me/251929341497',
       icon: MessageCircle,
     },
     {
@@ -69,6 +69,26 @@ const Contact = () => {
             );
           })}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ delay: 0.5, duration: 0.6 }}
+          className="flex flex-col md:flex-row justify-center items-center gap-8 mb-12 text-gray-400"
+        >
+          <div>
+            <p className="font-semibold">Email:</p>
+            <a href="mailto:abenezeralebachew3@gmail.com" className="text-neon-blue">
+              abenezeralebachew3@gmail.com
+            </a>
+          </div>
+          <div>
+            <p className="font-semibold">Phone:</p>
+            <a href="tel:+251929341497" className="text-neon-blue">
+              +251929341497
+            </a>
+          </div>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -1,5 +1,6 @@
 import Hero from './components/Hero';
 import Portfolio from './components/Portfolio';
+import ProfessionalExperience from './components/ProfessionalExperience';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -10,6 +11,7 @@ function App() {
       <div className="relative max-w-6xl mx-auto px-4 py-8">
         <Hero />
         <Portfolio />
+        <ProfessionalExperience />
         <Contact />
       </div>
       <Footer />
