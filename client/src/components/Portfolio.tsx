@@ -18,7 +18,7 @@ const projects = [
     image: 'https://images.unsplash.com/photo-1438232992991-995b7058bbb3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1173&q=80',
     tech: ['React.js', 'Tailwind CSS', 'Chapa', 'Framer Motion'],
     github: 'https://github.com/abeni-al7/peniel_website',
-    demo: 'https://peniel.netlify.app/',
+    demo: 'https://penieladdis.org/',
   },
   {
     title: 'Online Learning Platform',
