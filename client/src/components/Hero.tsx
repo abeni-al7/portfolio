@@ -49,7 +49,7 @@ const Hero = () => {
           transition={{ delay: 0.6, duration: 0.6 }}
           className="text-xl md:text-2xl text-gray-400 mb-8"
         >
-          Software Engineer | FullStack Developer | MERN | Flask
+          Software Engineer | FullStack Developer | Django | MERN | Flask
         </motion.p>
 
         <motion.div
