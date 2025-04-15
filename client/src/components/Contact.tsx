@@ -46,7 +46,7 @@ const Contact = () => {
         className="max-w-4xl mx-auto text-center px-4"
       >
         <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-white to-neon-blue bg-clip-text text-transparent">
-          Let's Connect
+          Let's Talk
         </h2>
 
         <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mb-12">
