@@ -2,12 +2,14 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Github, ExternalLink, Code2 } from 'lucide-react';
 import VERSEWISE from '../assets/My_AI_Spiritual_ChatBOT.png';
+import WEDAJ from '../assets/wedaj.png'
+import SOCIAL from '../assets/social.png'
 
 const projects = [
   {
     title: 'Wedaj',
     description: 'An AI powered voice companion providing emotional support and spiritual advices in Amharic',
-    image: 'https://upwork-usw2-prod-agora-file-storage.s3.us-west-2.amazonaws.com/profile/portfolio/thumbnail/6bea24519e30294398cd5a1ef1d9f345?response-content-disposition=inline%3B%20filename%3D%22image_large%22%3B%20filename%2A%3Dutf-8%27%27image_large&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEKP%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCICoGV5Hsroar%2BbcRgtSsRoOic5t9GZgTq8bwmHgXLNSoAiEAsLISNpHAPo2KcDKH0zWv8u4ps4PyDaWSuAAB7zKaKX4qkgUIbBAAGgw3Mzk5MzkxNzM4MTkiDEL%2BUiLcwGPOr92LaCrvBKranFU8L%2BYUZZddMS4ZQ3xLQi%2BiKfQe%2BDITzpwBu6z2ssHwKRxyfZnmJpU7QhjmkoGX65Ob91HBJS0x94DEyb8b%2FrNVAviDmASzkRM6X%2BWkizgaiBp609iauxkM75yftfs5LoDZR9b33VPO0CGf%2F0EvAXLGdqLajcMCQQnZyyU75mR1lfEVfpyKvYu4ZeRu1IIO9A7PYG5%2BJQ86slF%2BlEFfD%2F6TECl0zmCu4nAg6M7Bb94hYa2FBXV1ZJ6asp4KJrzwXzjuh9wMhrC6jYTEVsZduUjlpcnI3Mlw2z8MYisP9Sqd582nYq5KO6%2Fh8CJI0YFfju98%2FBdcBhhmOkEJCi69babW3r23gE8yftNHJs2ZirADnXUgt3Q20tCiLBzf5yz7UW7pgyxeVscmuEdo8smGPGlBPCPfXc%2BcwoPpwPhLRg7rD2K3diaFWinvSZS47eTl7KfOSNmhS0h%2FBC8DPKbffGdgbDPio%2BVXBBCuIJXR0wPVyzpJgaS3LQ10K36L70DUkdzddQLRDgpPdIuphjAK8o94PDx9IxVkrIfc4fo%2FLyXjB%2BHv9su1VWTskRkD%2BWV%2FMxTv1zOm3Y%2FyMGdDziDNue5VY4MnrpuyP9pf8YaKbOsrxYGonmKFLnvw%2FFwZwsb0En8JVijrdz8IRC%2BnUVw%2F%2BawpTu5AE4ScqcC8AbQB5%2BlbKwzBLdmcr5Jdtt%2FgmUkDlyhHh9d15r44wjVSWnQakiZGx9%2BRJkwDDj7RWM878g3%2BcuCPie8dg1l3s26IvZnYC8rfY2zUo%2FOmafgUFzwplW%2F3SF92%2FqAleeE4TEQMeOsd%2FRumWDPcT1X%2Bq8eKMKKYlskGOpkBIZoyNy%2FAcVC7JDt89XmPWUIGwkABj5k%2BCKlfKbIrPVpEofwcjeDnQ%2B7vUJFDKKkLhHkA4qwtVLUV%2FBJKvc5l2n8BFrV7uBAcLGHY9bCGa87D4DbQltIk2lMr9TlFD4y%2F%2B5K17B8Jsb6v%2FRSCXkJuaLSAqKX70tvne5cSkU6nQWnX3KuFWqmcUNR077eGqsw27A0aXKg5mooV&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20251125T113210Z&X-Amz-SignedHeaders=host&X-Amz-Expires=1799&X-Amz-Credential=ASIA2YR6PYW54753DALR%2F20251125%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Signature=dfdcec108c0d71b8f761b5596791e09208c09ef8390b41381f365a8a209db451',
+    image: WEDAJ,
     tech: ['Python', 'FastAPI', 'Gemini API', 'Celery'],
     github: 'https://github.com/abeni-al7/spirit_voice_api',
     demo: 'https://wedaj.me/',
@@ -15,7 +17,7 @@ const projects = [
   {
     title: 'SocialSpark',
     description: 'An AI content generation platform supporting business owners produce video and image ads for different social platforms with automatic posting',
-    image: 'https://upwork-usw2-prod-agora-file-storage.s3.us-west-2.amazonaws.com/profile/portfolio/thumbnail/011fc14f03a3b78cf3cc522c3e047028?response-content-disposition=inline%3B%20filename%3D%22image_large%22%3B%20filename%2A%3Dutf-8%27%27image_large&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEKT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIG181edGfzwZRFgj1JvgAUxeFxKboe5hWuKf%2BOluSokJAiEAhnYWFSQEGqurASQ78o%2BuOOvlylqy6fgQCzFwLbVHkLUqkgUIbRAAGgw3Mzk5MzkxNzM4MTkiDGMlJAo%2B3A1mvG35nCrvBIs80tOgO807PgraCD3Z6KvJTWuRC6UQWHMDlxNiVMnrKUbybV7WxmhGSCWtg1tjlGJwLht8ghcNlx87gV49ElWETyBSu4RymD7F1TJgu2G0A27jteiRoiBR%2BSK%2B8x%2Fr0%2B8Crg57K%2F2JZZhA4npp%2FFKpgO5odkLVp1ILNUa%2FcZSD74g%2FhND2oQHkqWTSL3YYbrDOhlxH%2BgcOYh%2BgL9%2BItdLgB2NxaA0bYh2B2DnGc10McLCNOmcEWP2IX6OG32jRal%2Flx6NbxScJLg3jdY61I0L2jXRpUL5yaTdnvs9ILFYOgA4l%2BJXyNDZEpuDOHt5RxcgDQWrFPVvnoMK3Qot%2BvNDi6LNAdrbScrARErfjo7DUDJt6Oafo3ZcgUS9jkz4PCP5r%2BuI0g3HSXpE%2BAzT5rKGP%2FT9CZgYJ%2B%2BWCcFPFfpQ0c7dvg4V6W81bgl7EpbxtzTbsVDKtgAsOI0%2Bk6INPE1%2FhEXIf9uepX2F9hyMH7%2FGhO5B8t2d6cgXs0sQOvfQOgZI2YW%2FGe1oEQ5B7fSlw9Q%2BCy3QG0l4%2FJJhRaZ0H3iwAHWRv6jFiMRqebxjHRGzV8RTOUQGbAAvPBl3ksA9F1lymjhMxNRnJ5riHetcp760RdjIYNKiA9qbwbpF734oCzC6Jw2Lp0uPYYS7%2B7Qe%2B%2FBtaxzsQRKoAb9Dr2693f4G9zfRSUQnU%2FUp26yn3VoNzq4vZIHOy7nnk4z2Xgl0mpfB06IZBqFjuve4RWIODgn4Kk%2B%2BUHD9kg50NJF%2B%2BoAsVeSf2ZuM1cJRFhywG0cK9V6sSIOIzDk7UWsIJmU8c4OntHXNJ92u%2Fdk62uYCWk%2FTWMKyolskGOpkBqbJl9K8Ws3jVB1avI%2FZantdzVlzk6Z2pm9Vj0RsnmymWzhKlAy27eQwZIrDK3E9OEl7Ycrw%2BWZS8A2FcvU5WoqOCJ7ZKTrNsCKDQgoihnsWhW0yLtvQ9dF5ZvmFpsHfnUXrL2FwL0Z4zq5tmUuuTh3pO0khIJIHn5MBJNMDDH1cMw2VyBYeYvjnCf1UblCdG1YijRambQqUY&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20251125T113548Z&X-Amz-SignedHeaders=host&X-Amz-Expires=1799&X-Amz-Credential=ASIA2YR6PYW5WJOO64LS%2F20251125%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Signature=883d9b17471e44e7368033df492d1d9ba9e8bae73ddc576c91fc45602bf19607',
+    image: SOCIAL,
     tech: ['Python', 'FastAPI', 'Gemini API', 'Celery'],
     github: 'https://github.com/abeni-al7/g6-socialspark',
     demo: 'https://socialsparkweb.vercel.app/',
