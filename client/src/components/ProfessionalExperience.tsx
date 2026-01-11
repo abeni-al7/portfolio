@@ -2,8 +2,28 @@ import { motion } from 'framer-motion';
 
 const experiences = [
   {
+    company: 'Echemonic Systems',
+    role: 'Software Engineer',
+    responsibilities: [
+      'Refactored a microservice utilizing Clean Architecture and Domain-Driven Design principles, making the code much more readable and easy to test.',
+      'Utilized RabbitMQ to orchestrate service communication and implemented dead letter queues and manual acknowledgement to ensure communication reliability across distributed systems.',
+      'Implemented a continuos integration (CI) pipeline for running unit tests and checking code linting and formatting before a merge to the staging branch reducing manual effort in code reviews and testing.',
+      'Created and maintained an API documentation using Swagger as a standalone container for easier understanding of API endpoints and how to use them.',
+    ],
+    techStack: [
+      'Python',
+      'Flask',
+      'RabbitMQ',
+      'Swagger',
+      'GitHub Actions',
+      'Docker',
+      'MySQL',
+      'Microservices',
+    ]
+  },
+  {
     company: 'Eskalate',
-    role: 'Software Engineer Intern',
+    role: 'Software Engineer',
     responsibilities: [
       'Delivered a production-grade Task Management API with Clean Architecture, secure authentication, and RBAC for scalable enterprise use.',
       'Led a team of 5 backend developers to build the backend of an AI-powered blog platform, enhancing user experience by delivering real-time AI suggestions and content improvements.',
@@ -23,7 +43,7 @@ const experiences = [
   },
   {
     company: 'GumiApps',
-    role: 'Backend Development Intern',
+    role: 'Backend Software Engineer',
     responsibilities: [
       'Helped build a Saas platform that is aimed to be used by pharmacies',
       'Implemented a user registration and secure authentication system for the Saas',
