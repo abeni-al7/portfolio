@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Briefcase, ChevronRight } from 'lucide-react';
 
 const experiences = [
   {
@@ -28,7 +29,7 @@ const experiences = [
       'Delivered a production-grade Task Management API with Clean Architecture, secure authentication, and RBAC for scalable enterprise use.',
       'Led a team of 5 backend developers to build the backend of an AI-powered blog platform, enhancing user experience by delivering real-time AI suggestions and content improvements.',
       'Directed a 15-member cross-functional team (web, mobile, and backend) to develop an AI-driven social media content generator and auto-poster, reducing manual effort in creating videos, images, and captions.',
-      '•Engineered FastAPI + Celery pipelines with LangChain & Gemini, automating media workflows and cutting content turnaround time by 4% through the use of background processes.',
+      'Engineered FastAPI + Celery pipelines with LangChain & Gemini, automating media workflows and cutting content turnaround time by 4% through the use of background processes.',
     ],
     techStack: [
       'Go',
@@ -82,68 +83,87 @@ const experiences = [
 
 const ProfessionalExperience = () => {
   return (
-    <section id="experience" className="py-20">
-      <motion.h2
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="text-4xl md:text-5xl font-bold text-center mb-16 font-heading bg-gradient-to-r from-white to-neon-blue bg-clip-text text-transparent"
-      >
-        Professional Experience
-      </motion.h2>
-      
-      <div className="max-w-4xl mx-auto px-4 relative">
-        {/* Timeline Line */}
-        <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-neon-blue/20 via-neon-blue/50 to-neon-blue/20 transform -translate-x-1/2 hidden md:block"></div>
-        
-        <div className="space-y-12">
+    <section id="experience" className="py-28">
+      <div className="max-w-7xl mx-auto px-6 md:px-10">
+        {/* Section header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-20"
+        >
+          <div className="flex items-center gap-4 mb-6">
+            <span className="section-divider"></span>
+            <span className="font-heading text-xs uppercase tracking-[0.2em] text-accent font-semibold">
+              Career Path
+            </span>
+          </div>
+          <h2 className="font-heading font-extrabold text-4xl md:text-6xl tracking-tightest text-warm-50 max-w-3xl">
+            Where I've
+            <br />
+            <span className="text-accent italic">made an impact</span>
+          </h2>
+        </motion.div>
+
+        {/* Experience cards */}
+        <div className="space-y-6">
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.2 }}
-              className={`relative flex flex-col md:flex-row gap-8 ${
-                index % 2 === 0 ? 'md:flex-row-reverse' : ''
-              }`}
+              transition={{ delay: index * 0.1, duration: 0.6 }}
+              className="group"
             >
-              {/* Timeline Dot */}
-              <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-dark-bg border-2 border-neon-blue rounded-full transform -translate-x-1/2 mt-6 z-10 hidden md:block shadow-[0_0_10px_#00f3ff]"></div>
-
-              {/* Content Card */}
-              <div className="flex-1 md:w-1/2">
-                <div className="bg-dark-card/80 backdrop-blur-sm p-6 rounded-xl border border-gray-800 hover:border-neon-blue/50 transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,243,255,0.1)] group">
-                  <h3 className="text-2xl font-bold text-neon-blue mb-1">{exp.company}</h3>
-                  <p className="text-lg text-white font-medium mb-4">{exp.role}</p>
-                  
-                  <ul className="space-y-2 mb-6">
-                    {exp.responsibilities?.map((item, idx) => (
-                      <li key={idx} className="text-gray-400 text-sm flex items-start gap-2">
-                        <span className="mt-1.5 w-1.5 h-1.5 bg-neon-blue/50 rounded-full flex-shrink-0"></span>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div>
-                    <h4 className="text-sm font-semibold text-gray-300 mb-3 uppercase tracking-wider">Tech Stack</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {exp.techStack?.map((tech, idx) => (
-                        <span
-                          key={idx}
-                          className="px-3 py-1 bg-dark-bg/50 rounded-full text-xs text-neon-blue border border-neon-blue/30 group-hover:border-neon-blue/70 transition-colors"
-                        >
-                          {tech}
-                        </span>
-                      ))}
+              <div className="bg-warm-900/30 border border-warm-800/50 rounded-xl p-6 md:p-8 hover:border-accent/20 hover:bg-warm-900/50 transition-all duration-500">
+                {/* Header row */}
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                  <div className="flex items-start gap-4">
+                    <div className="mt-1 p-2.5 bg-accent/10 rounded-lg border border-accent/20">
+                      <Briefcase className="w-5 h-5 text-accent" />
                     </div>
+                    <div>
+                      <h3 className="font-heading font-bold text-2xl text-warm-50 group-hover:text-accent transition-colors duration-300">
+                        {exp.company}
+                      </h3>
+                      <p className="font-sans text-lg text-warm-400 italic">
+                        {exp.role}
+                      </p>
+                    </div>
+                  </div>
+                  <span className="font-mono text-xs text-warm-600 tracking-wider">
+                    {String(index + 1).padStart(2, '0')} / {String(experiences.length).padStart(2, '0')}
+                  </span>
+                </div>
+
+                {/* Responsibilities */}
+                <div className="ml-0 md:ml-14 space-y-3 mb-6">
+                  {exp.responsibilities?.map((item, idx) => (
+                    <div key={idx} className="flex items-start gap-3 group/item">
+                      <ChevronRight className="w-4 h-4 text-accent/40 mt-1 flex-shrink-0 group-hover/item:text-accent transition-colors" />
+                      <p className="text-warm-400 text-[15px] leading-relaxed">
+                        {item}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Tech stack */}
+                <div className="ml-0 md:ml-14 pt-5 border-t border-warm-800/50">
+                  <div className="flex flex-wrap gap-2">
+                    {exp.techStack?.map((tech, idx) => (
+                      <span
+                        key={idx}
+                        className="px-3 py-1.5 bg-warm-950/80 border border-warm-800/60 rounded-md text-xs font-mono text-warm-400 group-hover:text-accent/80 group-hover:border-accent/20 transition-all duration-300"
+                      >
+                        {tech}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>
-              
-              {/* Empty space for the other side of timeline */}
-              <div className="hidden md:block md:w-1/2"></div>
             </motion.div>
           ))}
         </div>

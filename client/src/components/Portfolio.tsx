@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Github, ExternalLink, Code2 } from 'lucide-react';
+import { Github, ExternalLink, ArrowUpRight } from 'lucide-react';
 import VERSEWISE from '../assets/My_AI_Spiritual_ChatBOT.png';
 import WEDAJ from '../assets/wedaj.png'
 import SOCIAL from '../assets/social.png'
@@ -13,6 +13,7 @@ const projects = [
     tech: ['Python', 'FastAPI', 'Gemini API', 'Celery'],
     github: 'https://github.com/abeni-al7/spirit_voice_api',
     demo: 'https://wedaj.me/',
+    featured: true,
   },
   {
     title: 'SocialSpark',
@@ -21,6 +22,7 @@ const projects = [
     tech: ['Python', 'FastAPI', 'Gemini API', 'Celery'],
     github: 'https://github.com/abeni-al7/g6-socialspark',
     demo: 'https://socialsparkweb.vercel.app/',
+    featured: true,
   },
   {
     title: 'VERSEWise',
@@ -29,6 +31,7 @@ const projects = [
     tech: ['Python', 'Flask', 'RabbitMQ', 'Docker', 'Relational DB'],
     github: 'https://github.com/VerseWise',
     demo: 'https://versewise.io/',
+    featured: true,
   },
   {
     title: 'Peniel International Church Website',
@@ -37,6 +40,7 @@ const projects = [
     tech: ['React.js', 'Tailwind CSS', 'Chapa', 'Framer Motion'],
     github: 'https://github.com/abeni-al7/peniel_website',
     demo: 'https://penieladdis.org/',
+    featured: false,
   },
   {
     title: 'Aben Shell',
@@ -45,100 +49,190 @@ const projects = [
     tech: ['C', 'Linux'],
     github: 'https://github.com/abeni-al7/aben_shell',
     demo: 'https://github.com/abeni-al7/aben_shell',
+    featured: false,
   }
 ];
 
 const Portfolio = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.1,
+    threshold: 0.05,
   });
 
+  const featuredProjects = projects.filter(p => p.featured);
+  const otherProjects = projects.filter(p => !p.featured);
+
   return (
-    <section id="portfolio" className="min-h-screen py-20 flex flex-col justify-center relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute top-20 left-1/2 -translate-x-1/2 w-96 h-96 bg-neon-blue/10 rounded-full blur-[100px] -z-10"></div>
+    <section id="portfolio" className="py-28 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 md:px-10">
+        {/* Section header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-20"
+        >
+          <div className="flex items-center gap-4 mb-6">
+            <span className="section-divider"></span>
+            <span className="font-heading text-xs uppercase tracking-[0.2em] text-accent font-semibold">
+              Selected Work
+            </span>
+          </div>
+          <h2 className="font-heading font-extrabold text-4xl md:text-6xl tracking-tightest text-warm-50 max-w-2xl">
+            Projects that
+            <br />
+            <span className="text-accent italic">define my craft</span>
+          </h2>
+        </motion.div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.6 }}
-        className="text-center mb-16 relative z-10"
-      >
-        <h2 className="text-4xl md:text-5xl font-bold font-heading bg-gradient-to-r from-white to-neon-blue bg-clip-text text-transparent mb-4">
-          Featured Projects
-        </h2>
-        <div className="w-24 h-1 bg-neon-blue mx-auto rounded-full shadow-[0_0_10px_#00f3ff]"></div>
-      </motion.div>
-
-      <div ref={ref} className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto px-4 relative z-10">
-        {projects.map((project, index) => (
-          <motion.div
-            key={project.title}
-            initial={{ opacity: 0, y: 50 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ delay: index * 0.2, duration: 0.6 }}
-            className="bg-dark-card/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/10 hover:border-neon-blue/50 hover:shadow-[0_0_30px_rgba(0,243,255,0.15)] transition-all duration-500 group h-full flex flex-col"
-          >
-            <div className="relative h-56 overflow-hidden">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-full object-cover scale-105 group-hover:scale-110 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-dark-bg via-transparent to-transparent opacity-60"></div>
-              
-              {/* Overlay with buttons */}
-              <div className="absolute inset-0 bg-dark-bg/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 backdrop-blur-[2px]">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3 bg-white/10 border border-white/20 rounded-full text-white hover:bg-neon-blue hover:text-dark-bg hover:border-neon-blue transition-all duration-300 transform hover:scale-110 hover:rotate-12"
-                  title="View Source Code"
-                >
-                  <Github className="w-6 h-6" />
-                </a>
-                <a
-                  href={project.demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3 bg-white/10 border border-white/20 rounded-full text-white hover:bg-neon-blue hover:text-dark-bg hover:border-neon-blue transition-all duration-300 transform hover:scale-110 hover:-rotate-12"
-                  title="View Demo"
-                >
-                  <ExternalLink className="w-6 h-6" />
-                </a>
+        {/* Featured projects — large editorial cards */}
+        <div ref={ref} className="space-y-24 mb-24">
+          {featuredProjects.map((project, index) => (
+            <motion.article
+              key={project.title}
+              initial={{ opacity: 0, y: 60 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: index * 0.15, duration: 0.7 }}
+              className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center ${
+                index % 2 !== 0 ? 'lg:direction-rtl' : ''
+              }`}
+            >
+              {/* Image */}
+              <div className={`relative group ${index % 2 !== 0 ? 'lg:order-2' : ''}`}>
+                <div className="relative overflow-hidden rounded-xl aspect-[16/10]">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  {/* Warm overlay on hover */}
+                  <div className="absolute inset-0 bg-warm-950/40 group-hover:bg-warm-950/20 transition-colors duration-500"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-warm-950/80 via-transparent to-transparent"></div>
+                </div>
+                {/* Corner accent */}
+                <div className="absolute -bottom-3 -right-3 w-24 h-24 border-r-2 border-b-2 border-accent/30 rounded-br-xl"></div>
               </div>
-            </div>
 
-            <div className="p-6 flex-1 flex flex-col relative">
-              {/* Decorative gradient line */}
-              <div className="absolute top-0 left-6 right-6 h-[1px] bg-gradient-to-r from-transparent via-neon-blue/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              {/* Content */}
+              <div className={`space-y-5 ${index % 2 !== 0 ? 'lg:order-1' : ''}`}>
+                <div className="flex items-center gap-3">
+                  <span className="font-mono text-xs text-accent/70">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                  <div className="h-px flex-1 bg-warm-800"></div>
+                </div>
 
-              <div className="flex justify-between items-start mb-3">
-                <h3 className="text-2xl font-bold text-white group-hover:text-neon-blue transition-colors duration-300 font-heading">
+                <h3 className="font-heading font-bold text-3xl md:text-4xl text-warm-50 tracking-tight">
                   {project.title}
                 </h3>
-                <Code2 className="w-5 h-5 text-gray-500 group-hover:text-neon-blue transition-colors duration-300" />
-              </div>
-              
-              <p className="text-gray-400 mb-6 flex-1 leading-relaxed text-sm">
-                {project.description}
-              </p>
-              
-              <div className="flex flex-wrap gap-2 mt-auto">
-                {project.tech.map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-3 py-1 bg-neon-blue/5 rounded-full text-xs font-medium text-neon-blue border border-neon-blue/20 group-hover:border-neon-blue/40 group-hover:bg-neon-blue/10 transition-all duration-300"
+
+                <p className="text-warm-400 text-lg leading-relaxed font-sans">
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2 pt-2">
+                  {project.tech.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-3 py-1.5 bg-warm-900/80 border border-warm-800 rounded-md text-xs font-mono text-warm-300"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="flex items-center gap-5 pt-4">
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 font-heading font-semibold text-sm uppercase tracking-wider text-accent hover:text-accent-light transition-colors group/link"
                   >
-                    {tech}
-                  </span>
-                ))}
+                    Live Demo
+                    <ArrowUpRight className="w-4 h-4 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
+                  </a>
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-warm-500 hover:text-warm-300 transition-colors"
+                  >
+                    <Github className="w-4 h-4" />
+                    <span className="font-heading text-sm uppercase tracking-wider">Source</span>
+                  </a>
+                </div>
               </div>
+            </motion.article>
+          ))}
+        </div>
+
+        {/* Other projects — compact grid */}
+        {otherProjects.length > 0 && (
+          <div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className="flex items-center gap-4 mb-10"
+            >
+              <h3 className="font-heading font-bold text-xl text-warm-300">
+                More Projects
+              </h3>
+              <div className="h-px flex-1 bg-warm-800"></div>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {otherProjects.map((project, index) => (
+                <motion.div
+                  key={project.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                  className="group bg-warm-900/40 border border-warm-800/60 rounded-xl p-6 hover:border-accent/30 hover:bg-warm-900/60 transition-all duration-400"
+                >
+                  <div className="flex items-start justify-between mb-4">
+                    <h4 className="font-heading font-bold text-xl text-warm-100 group-hover:text-accent transition-colors">
+                      {project.title}
+                    </h4>
+                    <div className="flex items-center gap-3">
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-warm-600 hover:text-accent transition-colors"
+                      >
+                        <Github className="w-4 h-4" />
+                      </a>
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-warm-600 hover:text-accent transition-colors"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                      </a>
+                    </div>
+                  </div>
+                  <p className="text-warm-500 text-sm leading-relaxed mb-4">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tech.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-2 py-1 text-xs font-mono text-warm-500 bg-warm-950/80 rounded"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
             </div>
-          </motion.div>
-        ))}
+          </div>
+        )}
       </div>
     </section>
   );
