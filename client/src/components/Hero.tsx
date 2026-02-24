@@ -45,10 +45,10 @@ const Hero = () => {
       ref={ref}
       className="min-h-screen flex items-center relative overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-10 w-full py-32">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 w-full py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           {/* Left content — editorial text */}
-          <div className="lg:col-span-7 space-y-8">
+          <div className="lg:col-span-7 space-y-5">
             {/* Eyebrow tag */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -66,11 +66,9 @@ const Hero = () => {
               initial={{ opacity: 0, y: 40 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.3, duration: 0.7 }}
-              className="font-heading font-extrabold text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tightest text-warm-50"
+              className="font-heading font-extrabold text-4xl sm:text-5xl md:text-6xl leading-[0.95] tracking-tightest text-warm-50"
             >
-              Abenezer
-              <br />
-              <span className="text-accent">Alebachew</span>
+              Abenezer Alebachew <span className="text-accent">Endalew</span>
             </motion.h1>
 
             <motion.div
@@ -89,7 +87,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.6, duration: 0.6 }}
-              className="text-lg text-warm-400 max-w-lg leading-relaxed font-sans"
+              className="text-base text-warm-400 max-w-md leading-relaxed font-sans"
             >
               I build resilient backend systems, craft clean APIs, and architect
               distributed services that power real products — from AI companions
@@ -110,7 +108,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.8, duration: 0.6 }}
-              className="flex flex-wrap gap-4 pt-4"
+              className="flex flex-wrap gap-4 pt-2"
             >
               <button
                 onClick={() => scrollTo('portfolio')}
@@ -139,7 +137,7 @@ const Hero = () => {
               <div className="absolute -inset-4 border border-accent/20 rounded-2xl -rotate-3"></div>
               <div className="absolute -inset-4 border border-warm-800 rounded-2xl rotate-2"></div>
 
-              <div className="relative w-72 h-80 sm:w-80 sm:h-96 rounded-2xl overflow-hidden">
+              <div className="relative w-64 h-72 sm:w-72 sm:h-80 rounded-2xl overflow-hidden">
                 <img
                   src={Profile}
                   alt="Abenezer Alebachew"

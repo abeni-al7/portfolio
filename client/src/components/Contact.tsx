@@ -48,30 +48,28 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-28">
-      <div className="max-w-7xl mx-auto px-6 md:px-10">
-        <div ref={ref} className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+    <section id="contact" className="py-20">
+      <div className="max-w-5xl mx-auto px-6 md:px-10">
+        <div ref={ref} className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Left — CTA text */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7 }}
-            className="space-y-8"
+            className="space-y-5"
           >
-            <div className="flex items-center gap-4 mb-6">
+            <div className="flex items-center gap-4 mb-4">
               <span className="section-divider"></span>
               <span className="font-heading text-xs uppercase tracking-[0.2em] text-accent font-semibold">
                 Get in Touch
               </span>
             </div>
 
-            <h2 className="font-heading font-extrabold text-4xl md:text-6xl tracking-tightest text-warm-50 leading-[0.95]">
-              Let's build
-              <br />
-              <span className="text-accent italic">something great</span>
+            <h2 className="font-heading font-extrabold text-3xl md:text-5xl tracking-tightest text-warm-50">
+              Let's build <span className="text-accent italic">something great</span>
             </h2>
 
-            <p className="text-warm-400 text-lg leading-relaxed font-sans max-w-md">
+            <p className="text-warm-400 text-base leading-relaxed font-sans max-w-md">
               Available for freelance projects and full-time opportunities.
               I'd love to hear about what you're working on and how I can help.
             </p>

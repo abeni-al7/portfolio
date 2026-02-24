@@ -63,23 +63,23 @@ const Portfolio = () => {
   const otherProjects = projects.filter(p => !p.featured);
 
   return (
-    <section id="portfolio" className="py-28 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 md:px-10">
+    <section id="portfolio" className="py-20 relative overflow-hidden">
+      <div className="max-w-6xl mx-auto px-6 md:px-10">
         {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-20"
+          className="mb-12"
         >
-          <div className="flex items-center gap-4 mb-6">
+          <div className="flex items-center gap-4 mb-4">
             <span className="section-divider"></span>
             <span className="font-heading text-xs uppercase tracking-[0.2em] text-accent font-semibold">
               Selected Work
             </span>
           </div>
-          <h2 className="font-heading font-extrabold text-4xl md:text-6xl tracking-tightest text-warm-50 max-w-2xl">
+          <h2 className="font-heading font-extrabold text-3xl md:text-4xl tracking-tightest text-warm-50 max-w-sm">
             Projects that
             <br />
             <span className="text-accent italic">define my craft</span>
@@ -87,14 +87,14 @@ const Portfolio = () => {
         </motion.div>
 
         {/* Featured projects — large editorial cards */}
-        <div ref={ref} className="space-y-24 mb-24">
+        <div ref={ref} className="space-y-16 mb-16">
           {featuredProjects.map((project, index) => (
             <motion.article
               key={project.title}
               initial={{ opacity: 0, y: 60 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: index * 0.15, duration: 0.7 }}
-              className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center ${
+              className={`grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center ${
                 index % 2 !== 0 ? 'lg:direction-rtl' : ''
               }`}
             >
@@ -123,11 +123,11 @@ const Portfolio = () => {
                   <div className="h-px flex-1 bg-warm-800"></div>
                 </div>
 
-                <h3 className="font-heading font-bold text-3xl md:text-4xl text-warm-50 tracking-tight">
+                <h3 className="font-heading font-bold text-2xl md:text-3xl text-warm-50 tracking-tight">
                   {project.title}
                 </h3>
 
-                <p className="text-warm-400 text-lg leading-relaxed font-sans">
+                <p className="text-warm-400 text-base leading-relaxed font-sans">
                   {project.description}
                 </p>
 

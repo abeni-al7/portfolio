@@ -83,23 +83,23 @@ const experiences = [
 
 const ProfessionalExperience = () => {
   return (
-    <section id="experience" className="py-28">
-      <div className="max-w-7xl mx-auto px-6 md:px-10">
+    <section id="experience" className="py-20">
+      <div className="max-w-5xl mx-auto px-6 md:px-10">
         {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-20"
+          className="mb-12"
         >
-          <div className="flex items-center gap-4 mb-6">
+          <div className="flex items-center gap-4 mb-4">
             <span className="section-divider"></span>
             <span className="font-heading text-xs uppercase tracking-[0.2em] text-accent font-semibold">
               Career Path
             </span>
           </div>
-          <h2 className="font-heading font-extrabold text-4xl md:text-6xl tracking-tightest text-warm-50 max-w-3xl">
+          <h2 className="font-heading font-extrabold text-3xl md:text-4xl tracking-tightest text-warm-50 max-w-md">
             Where I've
             <br />
             <span className="text-accent italic">made an impact</span>
@@ -119,16 +119,16 @@ const ProfessionalExperience = () => {
             >
               <div className="bg-warm-900/30 border border-warm-800/50 rounded-xl p-6 md:p-8 hover:border-accent/20 hover:bg-warm-900/50 transition-all duration-500">
                 {/* Header row */}
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-4">
                   <div className="flex items-start gap-4">
                     <div className="mt-1 p-2.5 bg-accent/10 rounded-lg border border-accent/20">
                       <Briefcase className="w-5 h-5 text-accent" />
                     </div>
                     <div>
-                      <h3 className="font-heading font-bold text-2xl text-warm-50 group-hover:text-accent transition-colors duration-300">
+                      <h3 className="font-heading font-bold text-xl text-warm-50 group-hover:text-accent transition-colors duration-300">
                         {exp.company}
                       </h3>
-                      <p className="font-sans text-lg text-warm-400 italic">
+                      <p className="font-sans text-base text-warm-400 italic">
                         {exp.role}
                       </p>
                     </div>
@@ -139,11 +139,11 @@ const ProfessionalExperience = () => {
                 </div>
 
                 {/* Responsibilities */}
-                <div className="ml-0 md:ml-14 space-y-3 mb-6">
+                <div className="ml-0 md:ml-14 space-y-2 mb-5">
                   {exp.responsibilities?.map((item, idx) => (
                     <div key={idx} className="flex items-start gap-3 group/item">
                       <ChevronRight className="w-4 h-4 text-accent/40 mt-1 flex-shrink-0 group-hover/item:text-accent transition-colors" />
-                      <p className="text-warm-400 text-[15px] leading-relaxed">
+                      <p className="text-warm-400 text-sm leading-relaxed">
                         {item}
                       </p>
                     </div>
