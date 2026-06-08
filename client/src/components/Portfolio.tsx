@@ -4,15 +4,17 @@ import { Github, ExternalLink, ArrowUpRight } from 'lucide-react';
 import VERSEWISE from '../assets/My_AI_Spiritual_ChatBOT.png';
 import WEDAJ from '../assets/wedaj.png'
 import SOCIAL from '../assets/social.png'
+import CODEQUEST from '../assets/codequest.png'
+import ZENITH from '../assets/zenith.png'
 
 const projects = [
   {
-    title: 'Wedaj',
-    description: 'An AI powered voice companion providing emotional support and spiritual advices in Amharic',
-    image: WEDAJ,
-    tech: ['Python', 'FastAPI', 'Gemini API', 'Celery'],
-    github: 'https://github.com/abeni-al7/spirit_voice_api',
-    demo: 'https://wedaj.me/',
+    title: 'CodeQuest',
+    description: 'A debugging based gamified platform to learn coding.',
+    image: CODEQUEST,
+    tech: ['Python', 'FastAPI', 'TypeScript', 'React', 'PostgreSQL', 'Docker', 'Pytest'],
+    github: 'https://github.com/abeni-al7/CodeQuest',
+    demo: 'https://final-quest-lilac.vercel.app/',
     featured: true,
   },
   {
@@ -34,13 +36,22 @@ const projects = [
     featured: true,
   },
   {
-    title: 'Peniel International Church Website',
-    description: 'A modern church website with payment integration to accept donations.',
-    image: 'https://images.unsplash.com/photo-1438232992991-995b7058bbb3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1173&q=80',
-    tech: ['React.js', 'Tailwind CSS', 'Chapa', 'Framer Motion'],
-    github: 'https://github.com/abeni-al7/peniel_website',
-    demo: 'https://penieladdis.org/',
-    featured: false,
+    title: 'Zenith',
+    description: 'A platform for defining personal goals, associating habits with them and track personal progress.',
+    image: ZENITH,
+    tech: ['TypeScript', 'React', 'Dexie.js', 'Jest'],
+    github: 'https://github.com/abeni-al7/goal-metric',
+    demo: 'https://zenith-blush.vercel.app/',
+    featured: true,
+  },
+  {
+    title: 'Wedaj',
+    description: 'An AI powered voice companion providing emotional support and spiritual advices in Amharic',
+    image: WEDAJ,
+    tech: ['Python', 'FastAPI', 'Gemini API', 'Celery'],
+    github: 'https://github.com/abeni-al7/spirit_voice_api',
+    demo: 'https://wedaj.me/',
+    featured: true,
   },
   {
     title: 'Aben Shell',
@@ -50,7 +61,62 @@ const projects = [
     github: 'https://github.com/abeni-al7/aben_shell',
     demo: 'https://github.com/abeni-al7/aben_shell',
     featured: false,
-  }
+  },
+  {
+    title: 'Cuneiform',
+    description: 'A JSON Parser that performs lexical and syntactic analysis to identify valid and invalid JSON files.',
+    image: 'https://images.unsplash.com/photo-1438232992991-995b7058bbb3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1173&q=80',
+    tech: ['Go'],
+    github: 'https://github.com/abeni-al7/cuneiform',
+    demo: 'https://github.com/abeni-al7/cuneiform',
+    featured: false,
+  },
+  {
+    title: 'Lacon',
+    description: 'A Huffman based compression tool for text files.',
+    image: 'https://images.unsplash.com/photo-1438232992991-995b7058bbb3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1173&q=80',
+    tech: ['Go'],
+    github: 'https://github.com/abeni-al7/lacon',
+    demo: 'https://github.com/abeni-al7/lacon',
+    featured: false,
+  },
+  {
+    title: 'AskDoc',
+    description: 'A RAG chatbot that ingests PDF documents and answers questions based on them.',
+    image: 'https://images.unsplash.com/photo-1438232992991-995b7058bbb3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1173&q=80',
+    tech: ['Python', 'FastAPI', 'Weaviate', 'TypeScript', 'React'],
+    github: 'https://github.com/abeni-al7/rag-chatbot',
+    demo: 'https://github.com/abeni-al7/rag-chatbot',
+    featured: false,
+  },
+  {
+    title: 'Aben wc',
+    description: 'A CLI tool for getting stats aboit a text file.',
+    image: 'https://images.unsplash.com/photo-1438232992991-995b7058bbb3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1173&q=80',
+    tech: ['Go'],
+    github: 'https://github.com/abeni-al7/aben-wc',
+    demo: 'https://github.com/abeni-al7/aben-wc',
+    featured: false,
+  },
+  {
+    title: 'Goal Breaker',
+    description: 'An AI-powered tool that breaks down goals into actionable steps.',
+    image: 'https://media.istockphoto.com/id/2177959161/photo/programmer-coding-java-script-html-code-on-notebook-screen-at-home-work-from-home-working.jpg?s=1024x1024&w=is&k=20&c=ApfeH2V66_9XtRd3vmsAkC3MBFZ0A5S2Dzzr-H2NwFU=',
+    tech: ['TypeScript', 'Next.js', 'React', 'Python', 'FastAPI', 'PostgreSQL'],
+    github: 'https://github.com/abeni-al7/goal_breaker',
+    demo: 'https://goal-breaker-silk.vercel.app/',
+    featured: false,
+  },
+  {
+    title: 'Peniel International Church Website',
+    description: 'A modern church website with payment integration to accept donations.',
+    image: 'https://images.unsplash.com/photo-1438232992991-995b7058bbb3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1173&q=80',
+    tech: ['React.js', 'Tailwind CSS', 'Chapa', 'Framer Motion'],
+    github: 'https://github.com/abeni-al7/peniel_website',
+    demo: 'https://penieladdis.org/',
+    featured: false,
+  },
+  
 ];
 
 const Portfolio = () => {
